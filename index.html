@@ -11,11 +11,40 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark nav">
-      <div class="ham pl-1 pr-3 d-none d-md-block">
-        <img src="./assets/ham.svg" alt="Menu" />
+    <div class="header">Experience the best food</div>
+
+    <nav class="navbar navbar-expand-lg nav">
+      <a class="navbar-brand pl-4" href="#">Manganresto</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"
+          ><img src="assets/ham.svg" alt=""
+        /></span>
+      </button>
+
+      <div class="collapse navbar-collapse nav-items" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu-highlights">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery-section">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reservation">Reservations</a>
+          </li>
+        </ul>
       </div>
-      <a class="navbar-brand text-black" href="#">Manganresto</a>
     </nav>
 
     <div class="container-fluid main-section">
@@ -29,24 +58,20 @@
       </div>
     </div>
 
-    <div class="container about-section p-5" id="about">
-      <div class="row text-center mb-4">
-        <div class="col">
-          <h2>About Us</h2>
-          <p class="lead">Discover the story behind Manganresto</p>
-        </div>
-      </div>
-      <div class="row align-items-center text-justify">
+    <div class="about-section" id="about">
+      <div class="d-flex text-justify">
         <div class="col-md-6 d-md-block d-none">
           <div class="img-container">
             <img
-              src="./assets/2.jpeg"
+              src="./assets/AboutUs.jpeg"
               class="img-fluid rounded"
               alt="Our Restaurant"
             />
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 m-1 m-md-4">
+          <h2>About Us</h2>
+          <p class="lead">Discover the story behind Manganresto</p>
           <p>
             At Manganresto, we believe that food is more than just sustenance;
             it’s an experience. Our journey started with a passion for creating
@@ -65,7 +90,7 @@
       </div>
     </div>
 
-    <section class="menu-highlights">
+    <section id="menu-highlights" class="menu-highlights">
       <div class="container menu-highlights-section p-5" id="menu">
         <div class="row text-center mb-4">
           <div class="col">
@@ -126,7 +151,7 @@
       </div>
     </section>
 
-    <div class="specials-events">
+    <div id="special" class="specials-events">
       <div class="container p-5">
         <div class="row text-center mb-4">
           <div class="col">
@@ -176,7 +201,7 @@
       </div>
     </div>
 
-    <section class="gallery-section">
+    <section id="gallery-section" class="gallery-section">
       <div class="container pt-5" id="gallery">
         <div class="row text-center mb-4">
           <div class="col">
@@ -226,7 +251,7 @@
       </div>
     </section>
 
-    <section class="reservation-map-section my-4">
+    <section id="reservation" class="reservation-map-section my-4">
       <div class="container p-4" id="reservation-map">
         <div class="row">
           <div class="col-lg-6 reservation-form text-center my-auto pt-md-5">
