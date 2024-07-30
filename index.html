@@ -11,17 +11,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark nav text-center">
+    <nav class="navbar navbar-expand-lg navbar-dark nav">
+      <div class="ham pl-1 pr-3 d-none d-md-block">
+        <img src="./assets/ham.svg" alt="Menu" />
+      </div>
       <a class="navbar-brand text-black" href="#">Manganresto</a>
     </nav>
 
     <div class="container-fluid main-section">
-      <div class="row align-items-center text-center overlay">
+      <div class="align-items-center text-center overlay">
         <div class="col-md-12">
           <h1>Are You Hungry?</h1>
           <h2>Don't Wait!</h2>
           <p>Visit Our Restaurant</p>
-          <a href="#menu" class="btn btn-primary">Check Out Menu</a>
+          <a href="#menu" class="btn btn-outline-light">Check Out Menu</a>
         </div>
       </div>
     </div>
@@ -33,7 +36,7 @@
           <p class="lead">Discover the story behind Manganresto</p>
         </div>
       </div>
-      <div class="row align-items-center">
+      <div class="row align-items-center text-justify">
         <div class="col-md-6 d-md-block d-none">
           <div class="img-container">
             <img
@@ -131,39 +134,39 @@
             <p class="lead">What’s Happening at Manganresto</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row text-justify">
           <div class="col-md-4">
-            <h4>Weekly Specials</h4>
+            <h4 class="text-center">Weekly Specials</h4>
             <p>
               Join us every week for exciting new specials! Our chefs prepare
               unique dishes that showcase seasonal ingredients and creative
               culinary techniques.
             </p>
-            <ul>
+            <ul class="text-center">
               <li>Monday: Chef’s Special Pasta</li>
               <li>Wednesday: Half-Price Wine</li>
               <li>Friday: Seafood Extravaganza</li>
             </ul>
           </div>
           <div class="col-md-4">
-            <h4>Upcoming Events</h4>
+            <h4 class="text-center">Upcoming Events</h4>
             <p>
               Stay tuned for our upcoming events! From live music to themed
               nights, there’s always something happening at Manganresto.
             </p>
-            <ul>
+            <ul class="text-center">
               <li>August 12: Jazz Night</li>
               <li>September 5: Wine Tasting</li>
               <li>October 31: Halloween Party</li>
             </ul>
           </div>
           <div class="col-md-4">
-            <h4>Offers</h4>
+            <h4 class="text-center">Offers</h4>
             <p>
               Don’t miss out on our current promotions! We love to offer deals
               and discounts to our valued guests.
             </p>
-            <ul>
+            <ul class="text-center">
               <li>Happy Hour: 4-6 PM Daily</li>
               <li>Buy One Get One Free Appetizers on Tuesdays</li>
               <li>10% Off for Students with ID</li>
@@ -174,7 +177,7 @@
     </div>
 
     <section class="gallery-section">
-      <div class="container pt-5 px-5" id="gallery">
+      <div class="container pt-5" id="gallery">
         <div class="row text-center mb-4">
           <div class="col">
             <h2>Gallery</h2>
@@ -188,7 +191,7 @@
               style="background-image: url('./assets/1.jpeg')"
               data-gallery="1"
             >
-              Gallery 1
+              <span>Gallery 1</span>
             </div>
           </div>
           <div class="col-md-3 col-6 mb-4">
@@ -197,7 +200,7 @@
               style="background-image: url('./assets/1.jpeg')"
               data-gallery="2"
             >
-              Gallery 2
+              <span>Gallery 2</span>
             </div>
           </div>
           <div class="col-md-3 col-6 mb-4">
@@ -206,7 +209,7 @@
               style="background-image: url('./assets/2.jpeg')"
               data-gallery="3"
             >
-              Gallery 3
+              <span>Gallery 3</span>
             </div>
           </div>
           <div class="col-md-3 col-6 mb-4">
@@ -215,7 +218,7 @@
               style="background-image: url('./assets/2.jpeg')"
               data-gallery="4"
             >
-              Gallery 4
+              <span>Gallery 4</span>
             </div>
           </div>
         </div>
@@ -229,15 +232,20 @@
           <div class="col-lg-6 reservation-form text-center my-auto pt-md-5">
             <h2>Book a Reservation</h2>
             <p class="lead">Secure Your Spot With Us</p>
-            <button class="btn btn-primary">Book Now</button>
+            <button class="btn btn-outline-success">
+              <span
+                ><img src="./assets/wa.svg" alt="" width="30" height="30"
+              /></span>
+              Book Now
+            </button>
           </div>
           <div class="col-lg-6 map-container text-center pt-5 pt-md-0">
             <h3>Our Location</h3>
             <div class="embed-responsive embed-responsive-16by9 pt-3">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9775636275363!2d77.56398017481877!3d12.909163516244599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156310100001%3A0x71be53da4480fbbe!2sDayananda%20Sagar%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1722259957065!5m2!1sen!2sin"
-                width="450"
-                height="350"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.977563627956!2d77.59456231482191!3d12.971598790857785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670af8b40a9%3A0x1d94d2c5b8c4b7e2!2sBangalore%20Palace!5e0!3m2!1sen!2sin!4v1620646303012!5m2!1sen!2sin"
+                class="embed-responsive-item"
+                allowfullscreen=""
               ></iframe>
             </div>
           </div>
@@ -245,13 +253,13 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer footer-section">
       <div class="container">
         <div class="row">
           <!-- Middle Column (Logo) -->
           <div class="col-lg-6 col-md-12 order-0 order-md-1 text-center">
             <a href="#" class="logo">
-              <img src="./assets/logo.png" alt="Logo" />
+              <img src="./assets/logo.jpeg" alt="Logo" />
             </a>
           </div>
 
@@ -300,7 +308,7 @@
           </div>
         </div>
       </div>
-      <p class="copyright">
+      <p class="copyright text-center">
         &copy; <span id="current-year"></span> Restaurant Name. All Rights
         Reserved.
       </p>
