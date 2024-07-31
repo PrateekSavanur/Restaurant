@@ -27,12 +27,40 @@ const callClass = () => {
       "./assets/d3.jpeg",
       "./assets/d4.jpeg",
     ],
+    4: [
+      "./assets/d1.jpeg",
+      "./assets/d2.jpeg",
+      "./assets/d3.jpeg",
+      "./assets/d4.jpeg",
+    ],
+    5: [
+      "./assets/d1.jpeg",
+      "./assets/d2.jpeg",
+      "./assets/d3.jpeg",
+      "./assets/d4.jpeg",
+    ],
+    6: [
+      "./assets/d1.jpeg",
+      "./assets/d2.jpeg",
+      "./assets/d3.jpeg",
+      "./assets/d4.jpeg",
+    ],
+    7: [
+      "./assets/d1.jpeg",
+      "./assets/d2.jpeg",
+      "./assets/d3.jpeg",
+      "./assets/d4.jpeg",
+    ],
   };
 
   const galleryTitles = {
     1: "Food",
     2: "Ambience",
     3: "Drinks",
+    4: "Events",
+    5: "Featured",
+    6: "Influencers",
+    7: "Launch",
   };
 
   galleryButtons.forEach((button) => {

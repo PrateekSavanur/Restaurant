@@ -235,8 +235,17 @@ body {
 }
 
 .card-body {
-  padding: 20px;
-  height: 50vh;
+  padding: 30px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.wide-card {
+  width: 100% !important;
+  max-width: 350px !important;
 }
 
 .card-title {
@@ -266,24 +275,25 @@ body {
   padding: 2rem;
 }
 
+.gallery-heading h2 {
+  font-size: 3rem;
+}
+
 .gallery-btn {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  font-weight: bold;
-  height: 20vh;
-  background-size: cover;
   transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
 }
 
 .gallery-btn .svg-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .gallery-btn:hover {
@@ -303,14 +313,10 @@ body {
   justify-content: center;
 }
 
-.gallery-buttons .col-md-4 {
+.gallery-buttons .col-md-2 {
   display: flex;
   justify-content: center;
-  max-width: 200px;
-}
-
-.gallery-buttons .col-md-4:nth-child(2) {
-  margin: 0 20px;
+  max-width: 150px;
 }
 
 .gallery-display img {
@@ -322,7 +328,7 @@ body {
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 15s linear infinite;
+  animation: marquee 12s linear infinite;
 }
 
 /* Map and reservation */
@@ -398,19 +404,22 @@ body {
 }
 
 @media (max-width: 768px) {
-  .card-body {
-    padding: 20px;
-    height: 65vh;
+  .description {
+    font-size: 0.8rem;
   }
 
-  .card:hover {
-    transform: translateY(0px);
+  .card-body {
+    height: 500px;
+  }
+
+  .gallery-btn {
+    height: 5vh;
+    font-size: 1rem;
   }
 
   .gallery-display img {
     height: 60vh;
     width: auto;
-    margin-right: 2rem;
   }
 
   .reservation-form {
