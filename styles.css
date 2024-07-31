@@ -67,7 +67,7 @@ body {
 .about-section {
   background-color: #780000;
   padding: 2rem;
-  color: #dda15e;
+  color: #fff;
 }
 
 .about-section h2 {
@@ -94,8 +94,8 @@ body {
 /* Menu Highlights */
 
 .menu-highlights {
-  background-color: #9e6c57;
-  padding: 2rem;
+  background-color: #0c5c4c;
+  color: #f8f9fa;
 }
 
 .menu-highlights-section h2 {
@@ -112,27 +112,33 @@ body {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  height: 80vh;
+  width: 100%;
+  border-radius: 2rem;
 }
 
 .highlight-item img {
   width: 100%;
-  height: 30vh;
+  height: 60%;
   object-fit: cover;
 }
 
 .highlight-item .description {
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.highlight-item .hover-img {
+.highlight-item .hover-content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
@@ -140,26 +146,59 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.highlight-item:hover .hover-img {
+.highlight-item:hover .hover-content {
   opacity: 1;
 }
 
-.highlight-item .hover-img img {
+.highlight-item:hover img,
+.highlight-item:hover {
+  opacity: 1;
+}
+
+.highlight-item .hover-content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Special events */
-
 .specials-events {
-  color: #333;
   padding: 2rem;
 }
 
-.specials-events h2 {
-  font-size: 2.5rem;
+.special-title {
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #ff007f;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.special-title::before,
+.special-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: 3px solid;
+  opacity: 0.7;
+}
+
+.special-title::before {
+  left: -5px;
+  right: -5px;
+  border-color: #ff007f;
+  z-index: -1;
+  transform: rotate(2deg);
+}
+
+.special-title::after {
+  left: 5px;
+  right: 5px;
+  border-color: #ffd700;
+  z-index: -2;
+  transform: rotate(-2deg);
 }
 
 .specials-events p.lead {
@@ -187,47 +226,68 @@ body {
   margin-bottom: 10px;
 }
 
-/* Galley Section */
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: #f8f9fa;
+  background-color: #780000;
+}
 
+.card-body {
+  padding: 20px;
+  height: 50vh;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.list-unstyled li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+/* Galley Section */
 .gallery-section {
-  background-color: #9e6c57;
+  background-color: #0c5c4c;
+  color: #f8f9fa;
   padding: 2rem;
 }
 
 .gallery-btn {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  height: 30vh;
+  height: 20vh;
   background-size: cover;
   transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
 }
 
-.gallery-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.gallery-btn:hover::after {
-  background: rgba(0, 0, 0, 0.7);
+.gallery-btn .svg-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
 }
 
 .gallery-btn:hover {
   transform: scale(1.05);
-}
-
-.gallery-btn span {
-  z-index: 1;
 }
 
 .gallery-display {
@@ -238,10 +298,25 @@ body {
   margin-top: 20px;
 }
 
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-buttons .col-md-4 {
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+}
+
+.gallery-buttons .col-md-4:nth-child(2) {
+  margin: 0 20px;
+}
+
 .gallery-display img {
-  height: 30vh;
-  width: 45%;
-  margin-right: 15px;
+  height: 80vh;
+  width: auto;
+  margin-right: 2rem;
 }
 
 .marquee {
@@ -274,7 +349,7 @@ body {
 /* Footer */
 
 .footer-section {
-  background-color: #9e6c57;
+  background-color: #0c5c4c;
   color: #ffffff;
   padding: 2rem;
 }
@@ -323,13 +398,19 @@ body {
 }
 
 @media (max-width: 768px) {
-  .gallery-buttons .overlay-text {
-    height: 150px;
-    font-size: 1rem;
+  .card-body {
+    padding: 20px;
+    height: 65vh;
+  }
+
+  .card:hover {
+    transform: translateY(0px);
   }
 
   .gallery-display img {
-    height: 150px;
+    height: 60vh;
+    width: auto;
+    margin-right: 2rem;
   }
 
   .reservation-form {

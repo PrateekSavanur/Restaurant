@@ -9,17 +9,30 @@ const callClass = () => {
   const galleryDisplay = document.querySelector(".gallery-display");
 
   const galleryImages = {
-    1: ["./assets/1.jpeg", "./assets/2.jpeg", "./assets/2.jpeg"],
-    2: ["./assets/1.jpeg", "./assets/1.jpeg", "./assets/1.jpeg"],
-    3: ["./assets/1.jpeg", "./assets/1.jpeg", "./assets/1.jpeg"],
-    4: ["./assets/1.jpeg", "./assets/1.jpeg", "./assets/1.jpeg"],
+    1: [
+      "./assets/f1.jpeg",
+      "./assets/f2.jpeg",
+      "./assets/f3.jpeg",
+      "./assets/f4.jpeg",
+    ],
+    2: [
+      "./assets/a1.jpeg",
+      "./assets/a2.jpeg",
+      "./assets/a3.jpeg",
+      "./assets/a4.jpeg",
+    ],
+    3: [
+      "./assets/d1.jpeg",
+      "./assets/d2.jpeg",
+      "./assets/d3.jpeg",
+      "./assets/d4.jpeg",
+    ],
   };
 
   const galleryTitles = {
-    1: "Gallery 1",
-    2: "Gallery 2",
-    3: "Gallery 3",
-    4: "Gallery 4",
+    1: "Food",
+    2: "Ambience",
+    3: "Drinks",
   };
 
   galleryButtons.forEach((button) => {
